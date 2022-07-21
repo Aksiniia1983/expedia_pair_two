@@ -8,26 +8,22 @@ public class SearchResultVerificationStepDefs {
 //-------------------Vugar------------------------
     @Given("User on on the expedia home page") //
     public void user_on_on_the_expedia_home_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
     @When("User clicks on flight button")
     public void user_clicks_on_flight_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
 
     @When("types {string} in the Leaving from search box and clicks enter button")
     public void types_in_the_leaving_from_search_box_and_clicks_enter_button(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     @When("types {string} in Going to search box and clicks enter button")
     public void types_in_going_to_search_box_and_clicks_enter_button(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     // ----------------------Vugar----------------------
     @When("Chooses {string} as a departure date and {string} as a returning date")
