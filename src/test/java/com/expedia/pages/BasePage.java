@@ -11,22 +11,22 @@ public BasePage(){
 }
 
 @FindBy(xpath = "//span[.='Flights']")
- private WebElement flights;
+ public WebElement flights;
 
 @FindBy(xpath = "//button[@type='button']//span[.='Leaving from']")
-private WebElement leavingFrom;
+public WebElement leavingFrom;
 
 @FindBy(xpath = "//button[@type='button']//span[.='Going to']")
-private WebElement goingTo;
+public WebElement goingTo;
 
 @FindBy(xpath = "//button[@id='d1-btn']")
-private WebElement departingDate;
+public WebElement departingDate;
 
 @FindBy(xpath = "//button[@id='d2-btn']")
-private WebElement returningDate;
+public WebElement returningDate;
 
 @FindBy(xpath = "//button[@type='submit']")
-private WebElement search;
+public WebElement search;
 
 
 
