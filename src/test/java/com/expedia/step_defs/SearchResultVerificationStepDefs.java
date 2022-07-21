@@ -44,8 +44,7 @@ public class SearchResultVerificationStepDefs {
 
     @When("User is redirected  to the search result page")
     public void user_is_redirected_to_the_search_result_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     //-----------------------Nijat------------------------
     @When("User verifies that {string} is chosen from the dropdown by default")
