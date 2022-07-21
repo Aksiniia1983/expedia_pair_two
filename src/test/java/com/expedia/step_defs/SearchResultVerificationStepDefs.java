@@ -44,7 +44,7 @@ public class SearchResultVerificationStepDefs {
 
     @When("User is redirected  to the search result page")
     public void user_is_redirected_to_the_search_result_page() {
-
+//
     }
     //-----------------------Nijat------------------------
     @When("User verifies that {string} is chosen from the dropdown by default")
