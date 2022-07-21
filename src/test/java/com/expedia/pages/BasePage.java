@@ -25,7 +25,6 @@ private WebElement departingDate;
 @FindBy(xpath = "//button[@id='d2-btn']")
 private WebElement returningDate;
 
-
 @FindBy(xpath = "//button[@type='submit']")
 private WebElement search;
 
