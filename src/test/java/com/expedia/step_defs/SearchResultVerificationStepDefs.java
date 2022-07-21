@@ -41,9 +41,6 @@ public class SearchResultVerificationStepDefs {
     public void types_in_going_to_search_box_and_clicks_enter_button(String going) {
         basePage.goingTo.click();
         basePage.goingToInput.sendKeys(going + Keys.ENTER);
-
-        browserUtils.waitFor(3);
-
     }
 
     // ----------------------Vugar----------------------
