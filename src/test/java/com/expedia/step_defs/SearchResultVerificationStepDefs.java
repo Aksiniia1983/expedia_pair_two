@@ -48,25 +48,29 @@ public class SearchResultVerificationStepDefs {
 
     // ----------------------Vugar----------------------
     @When("Chooses {string} as a departure date and {string} as a returning date")
-    public void chooses_as_a_departure_date_and_as_a_returning_date(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void chooses_as_a_departure_date_and_as_a_returning_date(String departDate, String returnDate) {
+        basePage.dateTable.click();
+        basePage.selectDate(departDate);
+        basePage.selectDate(returnDate);
+        basePage.doneBtn.click();
+
     }
 
     @When("Clicks search button")
     public void clicks_search_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        basePage.search.click();
     }
     //------------------Azad--------------------------
 
-    @When("User is redirected  to the search result page")
-    public void user_is_redirected_to_the_search_result_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+   @When("User is redirected  to the search result page")
+    public void user_is_redirected_to_the_search_result_page() throws InterruptedException {
+        Thread.sleep(5000);
+
+        BrowserUtils.verifyTitle(Driver.getDriver(),"DCA to CMH flights");
     }
 
     //-----------------------Nijat------------------------
+    /*
     @When("User verifies that {string} is chosen from the dropdown by default")
     public void user_verifies_that_is_chosen_from_the_dropdown_by_default(String string) {
     }
@@ -78,6 +82,8 @@ public class SearchResultVerificationStepDefs {
         throw new io.cucumber.java.PendingException();
     }
     // --------------------Aksiniia--------------------------
+
+ */
 
 
 }
