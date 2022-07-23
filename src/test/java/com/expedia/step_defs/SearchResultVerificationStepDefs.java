@@ -64,16 +64,17 @@ public class SearchResultVerificationStepDefs {
 
    @When("User is redirected  to the search result page")
     public void user_is_redirected_to_the_search_result_page() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(50000);
 
         BrowserUtils.verifyTitle(Driver.getDriver(),"DCA to CMH flights");
     }
 
     //-----------------------Nijat------------------------
-    /*
+
     @When("User verifies that {string} is chosen from the dropdown by default")
     public void user_verifies_that_is_chosen_from_the_dropdown_by_default(String string) {
     }
+
 
     //-------------------------Ferdon------------------------
     @Then("User verifies that the lowest price flight shows on top of the list")
@@ -83,7 +84,7 @@ public class SearchResultVerificationStepDefs {
     }
     // --------------------Aksiniia--------------------------
 
- */
+
 
 
 }

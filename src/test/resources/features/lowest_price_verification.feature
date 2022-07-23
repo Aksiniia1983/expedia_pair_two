@@ -8,8 +8,8 @@ Feature: Lowest price in the search verification feature
     And Chooses "Sep 1, 2022" as a departure date and "Sep 3, 2022" as a returning date
     And Clicks search button
     And User is redirected  to the search result page
-#    When User verifies that "Price (Lowest)" is chosen from the dropdown by default
-#    Then User verifies that the lowest price flight shows on top of the list
+    When User verifies that "Price (Lowest)" is chosen from the dropdown by default
+    Then User verifies that the lowest price flight shows on top of the list
 
 
 
