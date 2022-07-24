@@ -17,9 +17,12 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SearchResultVerificationStepDefs {
 
+
     BasePage basePage = new BasePage();
     BrowserUtils browserUtils = new BrowserUtils();
     SearchResultPage searchResultPage = new SearchResultPage();
+
+
 
     //-------------------Vugar------------------------
     @Given("User on on the expedia home page") //
@@ -72,11 +75,14 @@ public class SearchResultVerificationStepDefs {
     //-----------------------Nijat------------------------
 
     @When("User verifies that {string} is chosen from the dropdown by default")
-    public void user_verifies_that_is_chosen_from_the_dropdown_by_default(String string) {
+    public void user_verifies_that_is_chosen_from_the_dropdown_by_default(String lowestPrice) {
+        Select select=new Select(basePage.dropdown);
+        String actualPrice=select.getFirstSelectedOption().getText();
+        Assert.assertEquals(lowestPrice,actualPrice);
     }
 
 
-    //-------------------------Ferdon------------------------
+   // -------------------------Ferdon------------------------
     @Then("User verifies that the lowest price flight shows on top of the list")
     public void user_verifies_that_the_lowest_price_flight_shows_on_top_of_the_list() {
         // Write code here that turns the phrase above into concrete actions

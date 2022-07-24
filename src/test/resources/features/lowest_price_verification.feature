@@ -9,7 +9,7 @@ Feature: Lowest price in the search verification feature
     And Clicks search button
     And User is redirected  to the search result page
     When User verifies that "Price (Lowest)" is chosen from the dropdown by default
-    Then User verifies that the lowest price flight shows on top of the list
+   Then User verifies that the lowest price flight shows on top of the list
 
 
 
