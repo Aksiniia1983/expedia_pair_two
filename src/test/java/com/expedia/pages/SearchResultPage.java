@@ -16,7 +16,7 @@ public class SearchResultPage {
     }
 
     @FindBy(xpath = "//select[@data-test-id='sortDropdown']")
-    public WebElement sortByDropdown;
+    public WebElement dropdown;
 
     @FindBy(xpath = "//button[@class='uitk-card-link']//span")
     public List<WebElement> flightOptions;

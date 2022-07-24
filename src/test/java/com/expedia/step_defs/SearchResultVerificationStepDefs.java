@@ -14,6 +14,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class SearchResultVerificationStepDefs {
 
@@ -76,7 +79,7 @@ public class SearchResultVerificationStepDefs {
 
     @When("User verifies that {string} is chosen from the dropdown by default")
     public void user_verifies_that_is_chosen_from_the_dropdown_by_default(String lowestPrice) {
-        Select select=new Select(basePage.dropdown);
+        Select select=new Select(searchResultPage.dropdown);
         String actualPrice=select.getFirstSelectedOption().getText();
         Assert.assertEquals(lowestPrice,actualPrice);
     }
@@ -85,8 +88,25 @@ public class SearchResultVerificationStepDefs {
    // -------------------------Ferdon------------------------
     @Then("User verifies that the lowest price flight shows on top of the list")
     public void user_verifies_that_the_lowest_price_flight_shows_on_top_of_the_list() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BrowserUtils.clickWithJS(searchResultPage.showMoreButton);
+        List<String> allText=BrowserUtils.getElementsText(searchResultPage.flightOptions);
+        String str ="";
+        for (String each: allText) {
+            str+=each;
+
+        }
+        String[] split = str.split(" ");
+        List<Integer> prices=new ArrayList<>();
+        for (String each:split) {
+            if(each.startsWith("$")){
+                int temp = Integer.parseInt(each.substring(1));
+                prices.add(temp);
+            }
+        }
+        int expectedSmallestPrice = prices.get(0);
+        for (Integer each: prices) {
+            Assert.assertTrue(each>=expectedSmallestPrice);
+        }
     }
     // --------------------Aksiniia--------------------------
 
