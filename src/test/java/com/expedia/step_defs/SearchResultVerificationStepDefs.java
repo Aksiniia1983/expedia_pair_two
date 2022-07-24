@@ -22,7 +22,6 @@ public class SearchResultVerificationStepDefs {
 
 
     BasePage basePage = new BasePage();
-    BrowserUtils browserUtils = new BrowserUtils();
     SearchResultPage searchResultPage = new SearchResultPage();
 
 
@@ -36,7 +35,7 @@ public class SearchResultVerificationStepDefs {
     @When("User clicks on flight button")
     public void user_clicks_on_flight_button() {
         basePage.flights.click();
-        browserUtils.verifyTitle(Driver.getDriver(), "Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights & More");
+        BrowserUtils.verifyTitle(Driver.getDriver(), "Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights & More");
     }
 
 
