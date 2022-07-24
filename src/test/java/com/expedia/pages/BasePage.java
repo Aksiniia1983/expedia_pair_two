@@ -36,8 +36,6 @@ public class BasePage { // Emanuil
     @FindBy(xpath = "//button[@data-stid ='apply-date-picker']")
     public WebElement doneBtn;
 
-    @FindBy (xpath = "//select[@data-test-id='sortDropdown']")
-    public WebElement dropdown;
 
     public void selectDate(String currentDate){
         WebElement date = Driver.getDriver().findElement(By.xpath("//button[@aria-label ='"+currentDate+"']"));
